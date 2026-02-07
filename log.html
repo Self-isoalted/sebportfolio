@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seb — Log</title>
+
+    <link rel="stylesheet" href="log.css" />
+
+    <!-- Markdown renderer -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Code highlighting (optional but nice) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-dark.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js/lib/highlight.min.js"></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="index.html"
+          >Seb<span class="brand__dot">•</span>Portfolio</a
+        >
+
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="log.html" class="active">Log</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <!-- LEFT: list of posts -->
+      <aside class="sidebar">
+        <div class="sidebar__head">
+          <h1>Log</h1>
+          <p class="muted">Weekly notes: learning, projects, books.</p>
+        </div>
+
+        <div class="search">
+          <input id="search" type="search" placeholder="Search posts..." />
+        </div>
+
+        <ul id="postList" class="postlist"></ul>
+
+        <div class="sidebar__foot muted">
+          <div>
+            <strong>Tip:</strong> Add a new Markdown file into
+            <code>log/posts/</code>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT: post viewer -->
+      <section class="viewer">
+        <div id="postMeta" class="postmeta"></div>
+        <article id="postContent" class="content">
+          <div class="empty">
+            <h2>Select a post 👈</h2>
+            <p class="muted">
+              Choose a log entry from the list to view it here.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="muted"
+          >© <span id="year"></span> Seb — Engineering log</span
+        >
+        <span class="muted">Built with plain HTML/CSS/JS</span>
+      </div>
+    </footer>
+
+    <script src="log.js"></script>
+  </body>
+</html>
